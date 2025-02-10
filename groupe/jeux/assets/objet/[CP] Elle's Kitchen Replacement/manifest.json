@@ -1,0 +1,41 @@
+{
+   "Name": "Elle's Kitchen Replacement",
+   "Author": "Elle/Junimods",
+   "Version": "1.1.6",
+   "Description": "Replaces the kitchen tiles in farmhouse_tiles.xnb!",
+   "UniqueID": "Elle.Kitchen",
+   "UpdateKeys": [ "Nexus:1968" ],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   },
+   "Dependencies": [
+   {
+      "UniqueID": "Lita.StarblueValley",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "minervamaga.CP.ATDSV",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "DustBeauty.1.4miscrecolour",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "Hesper.RusticCountrysideTownInterior",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "Rose.Interior.Roserish",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "grapeponta.VibrantPastoralRecolor",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "DaisyNiko.EarthyInteriors",
+      "IsRequired": false
+   },
+],
+}

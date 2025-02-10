@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwm0tgo0wmlnc"]
+
+[ext_resource type="Texture2D" uid="uid://bigghyxm8hf35" path="res://assets/assets final/meuble/four/sFurnance_front.png" id="1_p5y5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gfdd"]
+size = Vector2(58, 57)
+
+[node name="mur" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_8gfdd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.0760889, -2.07609)
+scale = Vector2(1.69226, 1.69226)
+texture = ExtResource("1_p5y5d")

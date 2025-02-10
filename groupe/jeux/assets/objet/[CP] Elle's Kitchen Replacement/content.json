@@ -1,0 +1,643 @@
+{
+  "Format": "2.0.0",
+  
+  "ConfigSchema": {
+	"Farmhouse Counter": {"AllowValues": "Tile, Wood",
+	"Default": "Tile"},
+	
+    "Farmhouse Tile": {"AllowValues": "Blue, LightBlue, Beige, Black, Sage, Green, Brown, LightPink, Pink, LightPurple, Purple, Modern, Red, Taupe, Turquoise, White, Winter, Yellow, Orange, Navy",
+	"Default": "Blue"},
+	
+	"Farmhouse Wood": {"AllowValues": "Brown, DarkBrown, Birch, Black, Mahogany, Modern, Oak, OffWhite, Walnut, White",
+	"Default": "Brown"},
+
+	"Farmhouse Appliances": {"AllowValues": "Vanilla, White, Modern, Black",
+	"Default": "Vanilla"},
+	
+	"Farmhouse Handles": {"AllowValues": "Silver, White, Black, Brass",
+	"Default": "Silver"},
+	
+	"Cabin Counter": {"AllowValues": "Tile, Wood",
+	"Default": "Tile"},
+	
+    "Cabin Tile": {"AllowValues": "Blue, LightBlue, Beige, Black, Sage, Green, Brown, LightPink, Pink, LightPurple, Purple, Modern, Red, Taupe, Turquoise, White, Winter, Yellow, Orange, Navy",
+	"Default": "Blue"},
+	
+	"Cabin Wood": {"AllowValues": "Brown, DarkBrown, Birch, Black, Mahogany, Modern, Oak, OffWhite, Walnut, White",
+	"Default": "Brown"},
+
+	"Cabin Appliances": {"AllowValues": "Vanilla, White, Modern, Black",
+	"Default": "Vanilla"},
+	
+	"Cabin Handles": {"AllowValues": "Silver, White, Black, Brass",
+	"Default": "Silver"},
+	
+	"Island Counter": {"AllowValues": "Tile, Wood",
+	"Default": "Tile"},
+	
+    "Island Tile": {"AllowValues": "Blue, LightBlue, Beige, Black, Sage, Green, Brown, LightPink, Pink, LightPurple, Purple, Modern, Red, Taupe, Turquoise, White, Winter, Yellow, Orange, Navy",
+	"Default": "Blue"},
+	
+	"Island Wood": {"AllowValues": "Brown, DarkBrown, Birch, Black, Mahogany, Modern, Oak, OffWhite, Walnut, White",
+	"Default": "Brown"},
+
+	"Island Appliances": {"AllowValues": "Vanilla, White, Modern, Black",
+	"Default": "Vanilla"},
+	
+	"Island Handles": {"AllowValues": "Silver, White, Black, Brass",
+	"Default": "Silver"},
+	
+	"Island Stove": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+	"Mini Fridge": {"AllowValues": "True, False",
+	"Default": "True"},
+	},
+	
+	
+  "Changes": [
+// Farmhouse Kitchen
+       // Wood
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Farmhouse Wood}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Farmhouse Wood}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Farmhouse Wood}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Farmhouse Wood}}.png",
+          "FromArea": { "X": 0, "Y": 48, "Width": 16, "Height": 16 }, 
+          "ToArea": { "X": 0, "Y": 304, "Width": 16, "Height": 16 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+       // Tile
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Farmhouse Tile}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Farmhouse Counter": "Tile",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Farmhouse Tile}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Farmhouse Counter": "Tile",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Farmhouse Tile}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Farmhouse Counter": "Tile",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Farmhouse Tile}}.png",
+          "FromArea": { "X": 0, "Y": 48, "Width": 16, "Height": 16 }, 
+          "ToArea": { "X": 0, "Y": 304, "Width": 16, "Height": 16 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Farmhouse Counter": "Tile",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   
+       // Appliances
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Farmhouse Appliances}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Farmhouse Appliances}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Farmhouse Appliances}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minifridge_{{Farmhouse Appliances}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/appliances_{{Farmhouse Appliances}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+     
+	 
+	   
+       // Handles
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Farmhouse Handles}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Farmhouse Handles}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Farmhouse Handles}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minihandles_{{Farmhouse Handles}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/handles_{{Farmhouse Handles}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Farmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+// Cabin Kitchen
+       // Wood
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Cabin Wood}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Cabin Wood}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Cabin Wood}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Cabin Wood}}.png",
+          "FromArea": { "X": 0, "Y": 48, "Width": 16, "Height": 16 }, 
+          "ToArea": { "X": 0, "Y": 304, "Width": 16, "Height": 16 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+       // Tile
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Cabin Tile}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Cabin Counter": "Tile",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Cabin Tile}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Cabin Counter": "Tile",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Cabin Tile}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Cabin Counter": "Tile",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Cabin Tile}}.png",
+          "FromArea": { "X": 0, "Y": 48, "Width": 16, "Height": 16 }, 
+          "ToArea": { "X": 0, "Y": 304, "Width": 16, "Height": 16 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Cabin Counter": "Tile",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   
+       // Appliances
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Cabin Appliances}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Cabin Appliances}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Cabin Appliances}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minifridge_{{Cabin Appliances}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/appliances_{{Cabin Appliances}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+     
+	 
+	   
+       // Handles
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Cabin Handles}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 80, "Height": 48 }, 
+          "ToArea": { "X": 16, "Y": 192, "Width": 80, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Cabin Handles}}.png",
+          "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 48 }, 
+          "ToArea": { "X": 176, "Y": 192, "Width": 16, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Cabin Handles}}.png",
+          "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 80 }, 
+          "ToArea": { "X": 176, "Y": 240, "Width": 16, "Height": 80 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minihandles_{{Cabin Handles}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/handles_{{Cabin Handles}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "Cabin",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+// Island Kitchen
+       // Wood
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/wood_{{Island Wood}}.png",
+          "FromArea": { "X": 48, "Y": 0, "Width": 32, "Height": 48 }, 
+          "ToArea": { "X": 80, "Y": 304, "Width": 32, "Height": 48 },
+          "Patchmode": "Replace",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+       // Tile
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/tile_{{Island Tile}}.png",
+          "FromArea": { "X": 48, "Y": 0, "Width": 32, "Height": 48 }, 
+          "ToArea": { "X": 80, "Y": 304, "Width": 32, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Island Counter": "Tile",
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+       // Appliances
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/appliances_{{Island Appliances}}.png",
+          "FromArea": { "X": 48, "Y": 0, "Width": 32, "Height": 48 }, 
+          "ToArea": { "X": 80, "Y": 304, "Width": 32, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minifridge_{{Island Appliances}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/appliances_{{Island Appliances}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "ToArea": { "X": 64, "Y": 304, "Width": 16, "Height": 48 },
+          "FromFile": "assets/stove_{{Island Appliances}}.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  "Island Stove": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	 
+	   
+       // Handles
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "FromFile": "assets/handles_{{Island Handles}}.png",
+          "FromArea": { "X": 48, "Y": 0, "Width": 32, "Height": 48 }, 
+          "ToArea": { "X": 80, "Y": 304, "Width": 32, "Height": 48 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TileSheets/Craftables",
+          "FromFile": "assets/minihandles_{{Island Handles}}.png",
+          "ToArea": { "X": 0, "Y": 864, "Width": 48, "Height": 32 },
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Mini Fridge": "True",
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors2",
+          "FromFile": "assets/handles_{{Island Handles}}2.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/farmhouse_tiles",
+          "ToArea": { "X": 64, "Y": 304, "Width": 16, "Height": 48 },
+          "FromFile": "assets/stove_handles_{{Island Handles}}.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "LocationName": "IslandFarmhouse",
+		  "Island Stove": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+     
+    ]
+}

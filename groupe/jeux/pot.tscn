@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://so2o6fmqyrm4"]
+
+[ext_resource type="Texture2D" uid="uid://cm7or0m5dsa1c" path="res://assets/objet/stove.png" id="1_6wvoy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ilt8"]
+size = Vector2(75, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74yym"]
+size = Vector2(74, 64)
+
+[node name="InteractionArea" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_5ilt8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, -16)
+scale = Vector2(0.787674, 0.787674)
+texture = ExtResource("1_6wvoy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_74yym")
